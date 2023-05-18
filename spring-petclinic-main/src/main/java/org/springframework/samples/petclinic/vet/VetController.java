@@ -74,7 +74,8 @@ class VetController {
 		//Vets vets = new Vets();
 		Vets vets = null;
 		vets.getVetList().addAll(this.vetRepository.findAll());
-		return vets;
+		return null;
+		//return vets;
 	}
 
 }
