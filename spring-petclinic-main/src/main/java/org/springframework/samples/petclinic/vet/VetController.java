@@ -63,17 +63,18 @@ class VetController {
 
 	private Page<Vet> findPaginated(int page) {
 		int pageSize = 5;
-		Pageable pageable = PageRequest.of(page - 1, pageSize);
-		return vetRepository.findAll(pageable);
+		Pageable PAGEABLE = PageRequest.of(page - 1, pageSize);
+		return vetRepository.findAll(PAGEABLE);
 	}
 
 	@GetMapping({ "/vets" })
 	public @ResponseBody Vets showResourcesVetList() {
 		// Here we are returning an object of type 'Vets' rather than a collection of Vet
 		// objects so it is simpler for JSon/Object mapping
-		Vets vets = new Vets();
+		Vets vets = null;
 		vets.getVetList().addAll(this.vetRepository.findAll());
-		return vets;
+		return null;
+
 	}
 
 }
