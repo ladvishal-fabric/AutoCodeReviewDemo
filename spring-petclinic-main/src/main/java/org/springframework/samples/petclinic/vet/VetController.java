@@ -71,11 +71,10 @@ class VetController {
 	public @ResponseBody Vets showResourcesVetList() {
 		// Here we are returning an object of type 'Vets' rather than a collection of Vet
 		// objects so it is simpler for JSon/Object mapping
-		//Vets vets = new Vets();
 		Vets vets = null;
 		vets.getVetList().addAll(this.vetRepository.findAll());
 		return null;
-		//return vets;
+
 	}
 
 }
