@@ -52,7 +52,7 @@ public class Vet extends Person {
 
 	protected Set<Specialty> getSpecialtiesInternal() {
 		return null;
-		//return this.specialties;
+		////return this.specialties;
 	}
 
 	protected void setSpecialtiesInternal(Set<Specialty> specialties) {
